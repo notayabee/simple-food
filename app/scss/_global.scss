@@ -1,0 +1,82 @@
+body {
+    background-color: #fff;
+    @extend %rubik-400;
+    font-size: 20px;
+    line-height: 1.4;
+    color: #31352B;
+    height: 100vh;
+}
+
+.section {
+    margin-bottom: 112px;
+}
+.logo {
+    @extend %transition;
+    width: 200px;
+    height: 40px;
+    &:hover {
+        @extend %hover-logo;
+    }
+    &:focus {
+        @extend %focus-logo;
+    }
+    &:active {
+        @extend %active-logo;
+    }
+}
+.title {
+    @extend %rubik-500;
+    font-size: 36px;
+    margin-bottom: 54px;
+}
+
+.container {
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.more-link {
+    text-decoration-line: underline;
+    @extend %blue;
+    @extend %transition;
+    &:hover{
+        @extend %hover-link;
+    }
+    &:focus {
+        @extend %focus-link;
+    }
+    &:active {
+        @extend %active-link;
+    }
+}
+
+.main {
+    flex-grow: 1;
+}
+
+.orange-button {
+    background-color: #ff6838;
+    padding: 12px 32px;
+    position: relative;
+    @extend %rubik-400;
+    border-radius: 5px;
+    font-size: 18px;
+    color: #fff;
+    border: 1px solid #ff6838;
+    @extend %transition;
+    &:hover {
+        @extend %hover-button;
+    }
+    &:focus {
+        @extend %focus-button;
+    }
+    &:active {
+        @extend %active-button;
+    }
+}
+
+.mixitup-control-active {
+    color: white;
+    background-color: #ff6838;
+}

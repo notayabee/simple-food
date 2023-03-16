@@ -1,0 +1,150 @@
+%rubik-700 {
+    font-family: 'Rubik-Bold';
+    font-weight: 700;
+}
+
+%rubik-500 {
+    font-family: 'Rubik-Medium';
+    font-weight: 500;
+}
+
+%rubik-400 {
+    font-family: 'Rubik-Regular';
+    font-weight: 400;
+}
+
+%rubik-300 {
+    font-family: 'Rubik-Light';
+    font-weight: 300;
+}
+
+%rubik-italic {
+    font-family: 'Rubik-Italic';
+    font-weight: 400;
+}
+
+%radius {
+    border-radius: 5px;
+}
+
+%orange {
+    color: #ff6838;
+}
+
+%white {
+    color: #fff;
+}
+
+%grey {
+    color: #c2c2c2;
+}
+
+%blue {
+    color: #363853;
+}
+
+%silver-200 {
+    color: #cecece;
+}
+
+%transition {
+    transition: box-shadow 0.4s, color 0.4s, background-color 0.4s, border 0.4s, text-shadow 0.4s, opacity 0.4s;
+}
+
+%hover-button {
+    background-color: #fff;
+    @extend %orange;
+}
+
+%focus-button {
+    background-color: #ff795010;
+    @extend %orange;
+}
+
+%active-button {
+    background-color: #ff795010;
+    @extend %orange;
+    border: 1px solid transparent
+}
+
+%hover-link {
+    @extend %orange;
+    text-decoration-line: none;
+}
+
+%focus-link {
+    box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+    @extend %radius;
+    text-decoration-line: none;
+}
+
+%active-link {
+    text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
+    text-decoration-line: none;
+}
+
+%hover-logo {
+    opacity: 0.8;
+}
+
+%focus-logo {
+    box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+    @extend %radius;
+}
+
+%active-logo {
+    opacity: 0.5;
+}
+
+%hover-input {
+    border-color: #363853;
+    @extend %blue;
+}
+
+%focus-input {
+    box-shadow: 0 0 0 2px #ff6863;
+}
+
+%hover-filter {
+    @extend %orange;
+    background-color: #ff795010;
+    box-shadow: 0 0 0 2px #ff6863;
+}
+
+%focus-filter {
+    box-shadow: 0 0 0 2px #ff6863;
+    background-color: transparent;
+}
+
+%active-filter {
+    background-color: #ff795010;
+}
+
+%hover-nav {
+    color: white;
+    background-color: #ff7a50;
+}
+
+%focus-nav {
+    background-color: rgba(255, 122, 80, 0.1);
+    border-color: #ff6838;
+}
+
+%active-nav {
+    background-color: rgba(255, 122, 80, 0.1);
+    border-color: transparent;
+}
+
+%hover-socials {
+    background-color: #ff7a50;
+}
+
+%focus-socials {
+    border-color: #ff6838;
+    background-color: rgba(255, 122, 80, 0.1);
+}
+
+%active-socials {
+    background-color: rgba(255, 122, 80, 0.1);
+    border-color: transparent;
+}

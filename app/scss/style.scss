@@ -1,8 +1,421 @@
-@import 'vars';
-@import 'fonts';
 @import 'reset';
+@import 'fonts';
+@import 'vars';
 @import 'global';
 
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 60px;
+    margin-bottom: 63px;
 
+    &__list {
+        display: flex;
+        margin: 0 51px 0 auto;
+        font-size: 18px;
+    }
+
+    &__list-link {
+        @extend %transition;
+
+        &:hover {
+            @extend %hover-link;
+        }
+
+        &:focus {
+            @extend %focus-link;
+        }
+
+        &:active {
+            @extend %active-link;
+        }
+    }
+
+    &__list-item:not(:last-child) {
+        margin-right: 45px;
+    }
+
+    &__nav {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__nav-item {
+        width: 44px;
+        height: 44px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    &__nav-item:not(:last-child) {
+        margin-right: 10px;
+    }
+
+    &__nav-link {
+        border: 1px solid transparent;
+        @extend %radius;
+        display: block;
+        height: 100%;
+        width: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 19px;
+        @extend %transition;
+
+        &:hover {
+            @extend %hover-nav;
+        }
+
+        &:focus {
+            @extend %focus-nav;
+        }
+
+        &:active {
+            @extend %active-nav;
+        }
+    }
+}
+
+.hero {
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__main {
+        margin: auto 0;
+        max-width: 450px;
+    }
+
+    &__title {
+        @extend %rubik-500;
+        font-size: 66px;
+        text-transform: uppercase;
+        transform: translateY(-15px);
+
+        &--orange {
+            @extend %orange;
+        }
+    }
+
+    &__text {
+        margin-bottom: 20px;
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 286px;
+    }
+}
+
+.popular {
+    text-align: center;
+
+    &__main {
+        margin-bottom: 60px;
+    }
+
+    &__filter {
+        display: flex;
+        margin-bottom: 45px;
+    }
+
+    &__filter-item {
+        &:not(:last-child) {
+            margin-right: 20px;
+        }
+    }
+
+    &__filter-button {
+        padding: 25px 33px 22px 85px;
+        @extend %radius;
+        box-shadow: 0 0 0 1px #cecece;
+        position: relative;
+        @extend %transition;
+
+        &:hover {
+            @extend %hover-filter;
+        }
+
+        &:focus {
+            @extend %focus-filter;
+        }
+
+        &:active {
+            @extend %active-filter;
+        }
+
+        &::before {
+            content: "";
+            display: block;
+            width: 44px;
+            height: 44px;
+            position: absolute;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            top: 16px;
+            left: 32px;
+        }
+
+        &--burger::before {
+            background-image: url('../images/filter/icon-category-burger.svg');
+        }
+
+        &--pizza::before {
+            background-image: url('../images/filter/icon-category-pizza.svg');
+        }
+
+        &--sandwich::before {
+            background-image: url('../images/filter/icon-category-sandvich.svg');
+        }
+
+        &--asian::before {
+            background-image: url('../images/filter/icon-category-asia.svg');
+        }
+
+        &--sets::before {
+            background-image: url('../images/filter/icon-category-dish.svg');
+        }
+    }
+
+    &__main {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        column-gap: 30px;
+        row-gap: 30px;
+    }
+
+    &__main-image {
+        width: 140px;
+        height: 140px;
+    }
+
+    &__main-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 210px;
+        padding: 17px 15px;
+        font-size: 15px;
+        @extend %radius;
+        box-shadow: 0 0 0 1px #cecece;
+        @extend %transition;
+
+        &:hover {
+            box-shadow: 0 0 0 1px #ff6838;
+            @extend %radius;
+        }
+    }
+
+    &__main-text {
+        margin-bottom: 20px;
+    }
+
+    &__main-number {
+        @extend %rubik-500;
+        margin-bottom: 6px;
+    }
+
+    &__main-button {
+        font-size: 14px;
+        max-width: 100px;
+        padding: 7px 14px;
+    }
+}
+
+.footer {
+    &__wrap {
+        display: flex;
+        font-size: 18px;
+    }
+
+    &__form {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        margin-right: 70px;
+        max-height: 162px;
+    }
+
+    &__form-items {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__input {
+        border: 1px solid #c2c2c285;
+        @extend %radius;
+        width: 200px;
+        height: 44px;
+        padding: 13px 15px;
+        margin-bottom: 12px;
+        font-size: 14px;
+        @extend %transition;
+
+        &:focus {
+            @extend %focus-input;
+        }
+
+        &:hover {
+            @extend %hover-input;
+
+            &::placeholder {
+                @extend %hover-input;
+            }
+        }
+    }
+
+    &__input::placeholder {
+        @extend %grey;
+        @extend %transition;
+    }
+
+    &__button {
+        padding: 13px 38px 13px 70px;
+        font-size: 14px;
+    }
+
+    &__button::before {
+        content: "";
+        display: block;
+        width: 16px;
+        height: 16px;
+        top: 35%;
+        left: 19%;
+        position: absolute;
+        background-image: url('../images/socials-icons/icon-telegram.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    &__list-item {
+        margin-bottom: 20px;
+    }
+
+    &__list:not(:last-child) {
+        margin-right: 74px;
+        margin-top: -11px;
+    }
+
+    &__list-link {
+        @extend %transition;
+
+        &:hover {
+            @extend %hover-link;
+        }
+
+        &:focus {
+            @extend %focus-link;
+        }
+
+        &active {
+            @extend %active-link;
+        }
+    }
+
+}
+
+.socials {
+    &__adress {
+        margin-bottom: 20px;
+        padding-left: 30px;
+    }
+
+    &__items-wrap {
+        display: flex;
+    }
+
+    &__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #cecece;
+        margin-right: 13px;
+    }
+
+    &__link {
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 20px 20px;
+        border: 1px solid transparent;
+        border-radius: 50%;
+        @extend %transition;
+
+        &:hover {
+            @extend %hover-socials;
+        }
+
+        &:focus {
+            @extend %focus-socials;
+        }
+
+        &:active {
+            @extend %active-socials;
+        }
+    }
+
+    &__adress-link {
+        position: relative;
+        @extend %transition;
+
+        &:hover {
+            @extend %hover-link;
+        }
+
+        &:focus {
+            @extend %focus-link;
+        }
+
+        &:active {
+            @extend %active-link;
+        }
+
+        &--adress::before {
+            content: "";
+            background-image: url('../images/socials-icons/icon-location.svg');
+        }
+
+        &--tel::before {
+            background-image: url('../images/socials-icons/icon-call.svg');
+        }
+
+        &--email::before {
+            background-image: url('../images/socials-icons/icon-message.svg');
+        }
+    }
+
+    &__adress-link::before {
+        content: "";
+        display: block;
+        position: absolute;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 24px;
+        height: 24px;
+        left: -30px;
+    }
+
+
+}
+
+.mark {
+    text-align: center;
+    padding: 30px 0;
+    font-size: 14px;
+}
 
 @import 'media';
